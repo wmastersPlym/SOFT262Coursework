@@ -5,64 +5,28 @@ using Xamarin.Forms;
 
 namespace RevisionCards
 {
-    class Subject
+    public class Subject
     {
-        private string title;
-        private string description;
+        public string Title { get; set; }
+        public string Description { get; set; }
 
-        private Color colour;
+        public Color Colour { get; set; }
 
-        private List<Card> cards; 
+        private List<Card> Cards { get; set; } 
         
         public Subject (string title, string description)
         {
-            this.title = title;
-            this.description = description;
-            colour = Color.PeachPuff;
-            cards = new List<Card>();
+            this.Title = title;
+            this.Description = description;
+            Colour = Color.PeachPuff;
+            Cards = new List<Card>();
         }
 
 
-        // GETTERS
-        public string GetTitle()
-        {
-            return title;
-        }
-
-        public string GetDescription()
-        {
-            return description;
-        }
-
-        public Color GetColour()
-        {
-            return colour;
-        }
-
-        public List<Card> GetCards()
-        {
-            return cards;
-        }
-
-        // SETTERS
-        public void SetTitle(string title)
-        {
-            this.title = title;
-        }
-
-        public void SetDescription(String description)
-        {
-            this.description = description;
-        }
-
-        public void SetColour(Color colour)
-        {
-            this.colour = colour;
-        }
 
         public void AddCard(Card card)
         {
-            cards.Add(card);
+            Cards.Add(card);
         }
 
     }

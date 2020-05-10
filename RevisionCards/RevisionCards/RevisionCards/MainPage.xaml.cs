@@ -18,7 +18,7 @@ namespace RevisionCards
         {
             InitializeComponent();
 
-            List<Subject> test = new List<Subject>();
+            List<Subject> subjects = new List<Subject>();
 
             Subject a = new Subject("Coding", "A collection of questions from various languages");
             a.AddCard(new Card("What does HTML stand for?", "Hyper Text Markup Language"));
@@ -28,10 +28,21 @@ namespace RevisionCards
             b.AddCard(new Card("What does UWH stand for?", "Underwater hockey"));
             b.AddCard(new Card("How many players are in the pool during an underwater hockey game?", "12"));
 
-            test.Add(a);
-            test.Add(b);
+            subjects.Add(a);
+            subjects.Add(b);
 
-            list.ItemsSource = test;
+            list.ItemsSource = subjects;
+        }
+
+        private void OnSubjectTapped(object sender, ItemTappedEventArgs e)
+        {
+            Subject tappedSubject = e.Item as Subject;
+            Navigation.PushAsync(new SubjectViewer(tappedSubject));
+        }
+
+        private void OnSubjectSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }

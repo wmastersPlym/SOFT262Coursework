@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RevisionCards
 {
-    class Card
+    public class Card
     {
         private string question;
 

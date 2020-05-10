@@ -14,8 +14,22 @@
            VerticalOptions="CenterAndExpand" 
            FontSize="Title"/>
 
-        <ListView x:Name="list">
+        <ListView x:Name="list"
+                  ItemsSource="{Binding Subjects}"
+                  ItemTapped="OnSubjectTapped"
+                  ItemSelected="OnSubjectSelected">
             
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="{Binding Colour}">
+                            
+                            <Label Text="{Binding Title, StringFormat='Subject {0}'}"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
             
         </ListView>
     </StackLayout>
