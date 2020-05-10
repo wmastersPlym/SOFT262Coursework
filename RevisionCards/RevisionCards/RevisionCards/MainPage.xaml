@@ -4,13 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="RevisionCards.MainPage">
+             x:Class="RevisionCards.MainPage"
+             Title="ReviCards!">
 
-    <StackLayout>
+    <StackLayout Padding="10">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="Subjects:" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" 
+           FontSize="Title"/>
+
+        <ListView x:Name="list">
+            
+            
+        </ListView>
     </StackLayout>
 
 </ContentPage>

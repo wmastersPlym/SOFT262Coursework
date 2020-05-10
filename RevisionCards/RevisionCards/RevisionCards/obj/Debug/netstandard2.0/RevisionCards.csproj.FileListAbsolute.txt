@@ -1,0 +1,14 @@
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\bin\Debug\netstandard2.0\RevisionCards.deps.json
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\bin\Debug\netstandard2.0\RevisionCards.dll
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\bin\Debug\netstandard2.0\ref\RevisionCards.dll
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\bin\Debug\netstandard2.0\RevisionCards.pdb
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.csprojAssemblyReference.cache
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.csproj.CoreCompileInputs.cache
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.AssemblyInfoInputs.cache
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.AssemblyInfo.cs
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.dll
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\ref\RevisionCards.dll
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\RevisionCards.pdb
