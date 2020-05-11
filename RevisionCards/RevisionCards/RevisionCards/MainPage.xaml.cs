@@ -21,12 +21,21 @@ namespace RevisionCards
             List<Subject> subjects = new List<Subject>();
 
             Subject a = new Subject("Coding", "A collection of questions from various languages");
-            a.AddCard(new Card("What does HTML stand for?", "Hyper Text Markup Language"));
-            a.AddCard(new Card("What does CSS stand for?", "Cascading Style Sheets"));
+            Topic topicA = new Topic("WebDev", "A collection of cards on different parts of web development");
+            topicA.AddCard(new Card("What does HTML stand for?", "Hyper Text Markup Language"));
+            topicA.AddCard(new Card("What does CSS stand for?", "Cascading Style Sheets"));
+            a.AddTopic(topicA);
+
+            Topic topicAA = new Topic("Java", "A collection of cards on JAVA");
+            topicAA.AddCard(new Card("What does JVM stand for?", "Java virtual machine"));
+            topicAA.AddCard(new Card("What does CSS stand for?", "Cascading Style Sheets"));
+            a.AddTopic(topicAA);
 
             Subject b = new Subject("Sports", "A collection of questions from different sports");
-            b.AddCard(new Card("What does UWH stand for?", "Underwater hockey"));
-            b.AddCard(new Card("How many players are in the pool during an underwater hockey game?", "12"));
+            Topic topicB = new Topic("Under water hockey", "A collection of cards on underwater hockey");
+            topicB.AddCard(new Card("What does UWH stand for?", "Underwater hockey"));
+            topicB.AddCard(new Card("How many players are in the pool during an underwater hockey game?", "12"));
+            b.AddTopic(topicB);
 
             subjects.Add(a);
             subjects.Add(b);

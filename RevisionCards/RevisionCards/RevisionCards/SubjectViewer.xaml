@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="RevisionCards.SubjectViewer">
+             x:Class="RevisionCards.SubjectViewer"
+             Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
             <Label 
@@ -19,6 +20,23 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                 FontSize="Body" />
+            <ListView x:Name="list"
+                  ItemsSource="{Binding Topics}"
+                  ItemTapped="OnTopicTapped">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+
+                                <Label Text="{Binding Title, StringFormat='Topics {0}'}"/>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,21 +12,21 @@ namespace RevisionCards
 
         public Color Colour { get; set; }
 
-        private List<Card> Cards { get; set; } 
+        public List<Topic> Topics { get; set; } 
         
         public Subject (string title, string description)
         {
             this.Title = title;
             this.Description = description;
             Colour = Color.PeachPuff;
-            Cards = new List<Card>();
+            Topics = new List<Topic>();
         }
 
 
 
-        public void AddCard(Card card)
+        public void AddTopic(Topic topic)
         {
-            Cards.Add(card);
+            Topics.Add(topic);
         }
 
     }

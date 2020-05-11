@@ -19,5 +19,11 @@ namespace RevisionCards
 
             BindingContext = subject;
         }
+
+        private void OnTopicTapped(object sender, ItemTappedEventArgs e)
+        {
+            //Subject tappedSubject = e.Item as Subject;
+            //Navigation.PushAsync(new SubjectViewer(tappedSubject));
+        }
     }
 }
