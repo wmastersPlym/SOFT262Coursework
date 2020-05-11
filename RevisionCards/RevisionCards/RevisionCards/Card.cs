@@ -6,39 +6,17 @@ namespace RevisionCards
 {
     public class Card
     {
-        private string question;
+        public string Question { get; set; }
 
-        private string answer;
+        private string Answer { get; set; }
 
 
         // CONSTRUCTOR
         public Card (string question, string answer)
         {
-            this.question = question;
-            this.answer = answer;
+            this.Question = question;
+            this.Answer = answer;
         }
 
-        // GETTERS
-        public string GetQuestion()
-        {
-            return question;
-        }
-
-        public string GetAnswer()
-        {
-            return answer;
-        }
-
-
-        // SETTERS
-        public void SetQuestion(string question)
-        {
-            this.question = question;
-        }
-
-        public void SetAnswer(string answer)
-        {
-            this.answer = answer;
-        }
     }
 }
