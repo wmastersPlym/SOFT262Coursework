@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RevisionCards.CardViewer"
+             Title="{Binding TopicSubjectTitle}"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ScreenTapped" />
+            </StackLayout.GestureRecognizers>
+            
+            <StackLayout x:Name="QuestionStack" VerticalOptions="CenterAndExpand">
+                <Label Text="Question:" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="30"
+                       x:Name="QuestionTitle"/>
+                <Label Text="LorumIpsum"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="40"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Question"/>
+            </StackLayout>
+            <StackLayout x:Name="AnswerStack" Opacity="0" VerticalOptions="CenterAndExpand">
+                <Label Text="Answer:"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="30"/>
+                <Label Text="LorumIpsumLorum IpsumLorumIpsumLorumIpsum"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="40"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Answer"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

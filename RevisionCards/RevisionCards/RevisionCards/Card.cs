@@ -8,7 +8,7 @@ namespace RevisionCards
     {
         public string Question { get; set; }
 
-        private string Answer { get; set; }
+        public string Answer { get; set; }
 
 
         // CONSTRUCTOR

@@ -5,21 +5,26 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="RevisionCards.SubjectViewer"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             >
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10" BackgroundColor="MistyRose">
             <Label 
                 x:Name="Title"
-                Text="{Binding Title}"
+                Text="Topics:"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                FontSize="Title" />
+                HorizontalTextAlignment="Center"
+                FontSize="40" />
             <Label 
                 x:Name="Description"
                 Text="{Binding Description}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
                 FontSize="Body" />
+
+            <Button Text="Start all" Clicked="StartAll" />
             <ListView x:Name="list"
                   ItemsSource="{Binding Topics}"
                   ItemTapped="OnTopicTapped">
@@ -27,9 +32,9 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid Padding="10" BackgroundColor="{Binding Colour}">
 
-                                <Label Text="{Binding Title, StringFormat='Topics {0}'}"/>
+                                <Label Text="{Binding Title, StringFormat='{0}'}" BackgroundColor="{Binding Colour}"/>
                                 
                             </Grid>
                         </ViewCell>

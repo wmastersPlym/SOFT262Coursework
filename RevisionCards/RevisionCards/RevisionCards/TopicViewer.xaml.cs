@@ -12,10 +12,15 @@ namespace RevisionCards
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TopicViewer : ContentPage
     {
-        public TopicViewer(Topic topic)
-        {
-            InitializeComponent();
 
+        private Topic topic;
+
+        public TopicViewer(Topic topic, Color colour)
+        {
+            this.topic = topic;
+
+            InitializeComponent();
+            stack.BackgroundColor = colour;
             BindingContext = topic;
         }
 
@@ -23,6 +28,11 @@ namespace RevisionCards
         {
             //Subject tappedSubject = e.Item as Subject;
             //Navigation.PushAsync(new SubjectViewer(tappedSubject));
+        }
+
+        private void StartClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CardViewer(this.topic.Cards, topic.Title));
         }
     }
 }

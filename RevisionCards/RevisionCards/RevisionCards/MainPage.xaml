@@ -7,12 +7,17 @@
              x:Class="RevisionCards.MainPage"
              Title="ReviCards!">
 
-    <StackLayout Padding="10">
+    <StackLayout Padding="10" BackgroundColor="MistyRose">
         <!-- Place new controls here -->
         <Label Text="Subjects:" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" 
-           FontSize="Title"/>
+           FontSize="40"/>
+        <Label Text="Welcome to ReviCards, pick a subject to view their topics." 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+           FontSize="Body"
+           HorizontalTextAlignment="Center"/>
 
         <ListView x:Name="list"
                   ItemsSource="{Binding Subjects}"
@@ -22,9 +27,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid BackgroundColor="{Binding Colour}">
-                            
-                            <Label Text="{Binding Title, StringFormat='Subject {0}'}"/>
+                        <Grid BackgroundColor="{Binding Colour}" Padding="10">
+
+                            <Label Text="{Binding Title, StringFormat='{0}'}" VerticalTextAlignment="Center"/>
 
                         </Grid>
                     </ViewCell>

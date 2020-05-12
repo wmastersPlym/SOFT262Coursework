@@ -7,8 +7,10 @@
              x:Class="RevisionCards.TopicViewer"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Start" />
+        <StackLayout Padding="10" x:Name="stack">
+            <Label Text="Cards:" FontSize="40" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding Description}" FontSize="Body" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <Button Text="Start" Clicked="StartClicked"/>
 
             <ListView x:Name="list"
                   ItemsSource="{Binding Cards}"
@@ -17,9 +19,9 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
+                            <Grid Padding="10">
 
-                                <Label Text="{Binding Question, StringFormat='Question: {0}'}"/>
+                                <Label Text="{Binding Question, StringFormat='Question: {0}'}" VerticalTextAlignment="Center"/>
 
                             </Grid>
                         </ViewCell>
