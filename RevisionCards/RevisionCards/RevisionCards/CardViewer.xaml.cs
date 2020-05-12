@@ -20,9 +20,11 @@ namespace RevisionCards
         private int position;
 
 
-        public CardViewer(List<Card> cards, string title)
+        public CardViewer(List<Card> cards, string title, Color colour)
         {
             InitializeComponent();
+
+            MainStack.BackgroundColor = colour;
 
             status = CardStatus.Question;
             position = 0;
@@ -41,14 +43,18 @@ namespace RevisionCards
             {
                 await AnswerStack.FadeTo(1); // Fades in the answer
                 status = CardStatus.Answer;
-            } else
+            } else if(status == CardStatus.Answer)
             {
                 await AnswerStack.FadeTo(0);
+                status = CardStatus.Question;
 
                 SetQuestionAndAnswer();
 
 
-                status = CardStatus.Question;
+                
+            } else
+            {
+
             }
 
             
@@ -67,6 +73,7 @@ namespace RevisionCards
                     position++;
                 } else
                 {
+                    status = CardStatus.Finished;
                     DisplayEndScreen();
                 }
                 
@@ -86,6 +93,7 @@ namespace RevisionCards
     enum CardStatus
     {
         Question,
-        Answer
+        Answer,
+        Finished
     }
 }

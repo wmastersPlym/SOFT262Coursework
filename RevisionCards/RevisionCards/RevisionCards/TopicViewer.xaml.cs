@@ -32,7 +32,7 @@ namespace RevisionCards
 
         private void StartClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CardViewer(this.topic.Cards, topic.Title));
+            Navigation.PushAsync(new CardViewer(this.topic.Cards, topic.Title, topic.Colour));
         }
     }
 }

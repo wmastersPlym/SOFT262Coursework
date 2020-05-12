@@ -35,7 +35,7 @@ namespace RevisionCards
             {
                 allCards.AddRange(t.Cards);
             }
-            Navigation.PushAsync(new CardViewer(allCards, subject.Title));
+            Navigation.PushAsync(new CardViewer(allCards, subject.Title, subject.Colour));
         }
     }
 }
