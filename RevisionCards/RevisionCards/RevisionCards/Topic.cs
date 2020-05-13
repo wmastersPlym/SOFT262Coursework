@@ -15,6 +15,14 @@ namespace RevisionCards
 
         public Color Colour { get; set; }
 
+
+        public Topic()
+        {
+            this.Title = "test";
+            this.Description = "test";
+            Colour = Color.PeachPuff;
+            Cards = new List<Card>();
+        }
         public Topic(string title, string description)
         {
             Title = title;

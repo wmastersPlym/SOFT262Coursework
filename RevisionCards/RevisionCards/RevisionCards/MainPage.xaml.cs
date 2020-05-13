@@ -38,5 +38,16 @@ namespace RevisionCards
         {
             Navigation.PushAsync(new NewSubject());
         }
+
+        private void SaveClicked(object sender, EventArgs e)
+        {
+            Data.GetInstance().Save();
+        }
+
+        private void LoadClicked(object sender, EventArgs e)
+        {
+            ObservableCollection<Subject> test = Data.GetInstance().TestLoad();
+            Console.WriteLine("TEST");
+        }
     }
 }

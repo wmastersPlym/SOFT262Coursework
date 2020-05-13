@@ -18,5 +18,10 @@ namespace RevisionCards
             this.Answer = answer;
         }
 
+        public Card()
+        {
+            Question = "test";
+            Answer = "test";
+        }
     }
 }

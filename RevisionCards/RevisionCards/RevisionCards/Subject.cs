@@ -14,6 +14,14 @@ namespace RevisionCards
 
         public List<Topic> Topics { get; set; } 
         
+        public Subject()
+        {
+            this.Title = "test";
+            this.Description = "test";
+            Colour = Color.PeachPuff;
+            Topics = new List<Topic>();
+        }
+
         public Subject (string title, string description)
         {
             this.Title = title;
