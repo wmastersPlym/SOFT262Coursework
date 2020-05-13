@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2IS8OO0Zv81odFlTR07mXv/8I1M698iZWCDrGrEwj0Zu13Q2AaeSo0X5hVf6D8KzSnQajENzXMCTEhB1kX0/MA==",
+  "dgSpecHash": "FNhqwVej4SqUS5pSEexE81DDI7wpsIh/J28pRzfrhezfuwjr9MgUW7DSP2yuciUkSOltVmcp0GEpbhHv6cwdCg==",
   "success": true,
   "projectFilePath": "E:\\Documents\\GitHub\\SOFT262Coursework\\RevisionCards\\RevisionCards\\RevisionCards\\RevisionCards.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\William\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\William\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
+    "C:\\Users\\William\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\William\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
   ],
   "logs": []

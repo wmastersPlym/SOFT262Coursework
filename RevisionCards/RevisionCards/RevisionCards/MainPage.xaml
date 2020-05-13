@@ -6,7 +6,14 @@
              mc:Ignorable="d"
              x:Class="RevisionCards.MainPage"
              Title="ReviCards!">
-
+    
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Subject" Clicked="NewSubjectClicked" Order="Secondary"/>
+        <ToolbarItem Text="Edit Subject" Clicked="NewSubjectClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    
+    
     <StackLayout Padding="10" BackgroundColor="MistyRose">
         <!-- Place new controls here -->
         <Label Text="Subjects:" 
@@ -21,8 +28,7 @@
 
         <ListView x:Name="list"
                   ItemsSource="{Binding Subjects}"
-                  ItemTapped="OnSubjectTapped"
-                  ItemSelected="OnSubjectSelected">
+                  ItemTapped="OnSubjectTapped">
             
             <ListView.ItemTemplate>
                 <DataTemplate>

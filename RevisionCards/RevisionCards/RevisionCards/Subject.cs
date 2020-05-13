@@ -22,6 +22,14 @@ namespace RevisionCards
             Topics = new List<Topic>();
         }
 
+        public Subject(string title, string description, Color colour)
+        {
+            this.Title = title;
+            this.Description = description;
+            Colour = colour;
+            Topics = new List<Topic>();
+        }
+
 
 
         public void AddTopic(Topic topic)
