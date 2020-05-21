@@ -7,6 +7,10 @@
              x:Class="RevisionCards.SubjectViewer"
              Title="{Binding Title}"
              >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Topic" Clicked="NewTopicClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="10" BackgroundColor="{Binding Colour}">
             <Label 

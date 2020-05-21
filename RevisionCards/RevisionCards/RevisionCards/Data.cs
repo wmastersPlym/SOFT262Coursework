@@ -84,7 +84,9 @@ namespace RevisionCards
         {
             if(allSubjects == null)
             {
-                generateTestSubjects();
+                //generateTestSubjects();
+                SerialisableData sd = new SerialisableData();
+                allSubjects = sd.Load();
                 return GetAllSubjects();
             } else
             {

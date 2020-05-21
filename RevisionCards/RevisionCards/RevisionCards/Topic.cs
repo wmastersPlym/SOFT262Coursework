@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Collections.ObjectModel;
 
 namespace RevisionCards
 {
@@ -11,7 +12,7 @@ namespace RevisionCards
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public List<Card> Cards { get; set; }
+        public ObservableCollection<Card> Cards { get; set; }
 
         public Color Colour { get; set; }
 
@@ -21,14 +22,14 @@ namespace RevisionCards
             this.Title = "test";
             this.Description = "test";
             Colour = Color.PeachPuff;
-            Cards = new List<Card>();
+            Cards = new ObservableCollection<Card>();
         }
         public Topic(string title, string description)
         {
             Title = title;
             Description = description;
             Colour = Color.PeachPuff;
-            Cards = new List<Card>();
+            Cards = new ObservableCollection<Card>();
         }
 
         public Topic(string title, string description, Color colour)
@@ -36,7 +37,7 @@ namespace RevisionCards
             Title = title;
             Description = description;
             Colour = colour;
-            Cards = new List<Card>();
+            Cards = new ObservableCollection<Card>();
         }
 
         public void AddCard(Card card)

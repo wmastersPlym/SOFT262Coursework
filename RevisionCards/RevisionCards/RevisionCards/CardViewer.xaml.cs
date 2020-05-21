@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,12 @@ namespace RevisionCards
         public string TopicSubjectTitle;
 
 
-        private List<Card> allCards;
+        private ObservableCollection<Card> allCards;
         private CardStatus status;
         private int position;
 
 
-        public CardViewer(List<Card> cards, string title, Color colour)
+        public CardViewer(ObservableCollection<Card> cards, string title, Color colour)
         {
             InitializeComponent();
 

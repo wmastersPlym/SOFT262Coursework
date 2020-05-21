@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
 
@@ -12,14 +13,14 @@ namespace RevisionCards
 
         public Color Colour { get; set; }
 
-        public List<Topic> Topics { get; set; } 
+        public ObservableCollection<Topic> Topics { get; set; } 
         
         public Subject()
         {
             this.Title = "test";
             this.Description = "test";
             Colour = Color.PeachPuff;
-            Topics = new List<Topic>();
+            Topics = new ObservableCollection<Topic>();
         }
 
         public Subject (string title, string description)
@@ -27,7 +28,7 @@ namespace RevisionCards
             this.Title = title;
             this.Description = description;
             Colour = Color.PeachPuff;
-            Topics = new List<Topic>();
+            Topics = new ObservableCollection<Topic>();
         }
 
         public Subject(string title, string description, Color colour)
@@ -35,7 +36,7 @@ namespace RevisionCards
             this.Title = title;
             this.Description = description;
             Colour = colour;
-            Topics = new List<Topic>();
+            Topics = new ObservableCollection<Topic>();
         }
 
 
