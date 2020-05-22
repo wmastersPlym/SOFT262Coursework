@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              x:Class="RevisionCards.TopicViewer"
              Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New Card" Clicked="NewCardClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="10" x:Name="stack">
             <Label Text="Cards:" FontSize="40" HorizontalOptions="CenterAndExpand"/>

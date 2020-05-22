@@ -34,5 +34,10 @@ namespace RevisionCards
         {
             Navigation.PushAsync(new CardViewer(this.topic.Cards, topic.Title, topic.Colour));
         }
+
+        private void NewCardClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewCard(topic));
+        }
     }
 }

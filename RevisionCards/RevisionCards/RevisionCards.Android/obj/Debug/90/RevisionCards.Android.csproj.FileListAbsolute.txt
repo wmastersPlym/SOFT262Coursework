@@ -475,3 +475,12 @@ E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewOnScrollListener.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsVideoView.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MediaElementRenderer.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper_InitialScrollListener.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RadioButtonRenderer.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ClipboardChangeListener.java
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
