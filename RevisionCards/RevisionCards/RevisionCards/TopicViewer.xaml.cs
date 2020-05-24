@@ -32,9 +32,16 @@ namespace RevisionCards
             Navigation.PushAsync(new EditCard(tappedCard, topic));
         }
 
-        private void StartClicked(object sender, EventArgs e)
+        async private void StartClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CardViewer(this.topic.Cards, topic.Title, topic.Colour));
+            if(topic.Cards.Count > 0 && topic.Cards != null)
+            {
+                await Navigation.PushAsync(new CardViewer(topic.Cards, topic.Title, topic.Colour));
+            } else
+            {
+                await DisplayAlert("Alert", "No cards found", "OK");
+            }
+            
         }
 
         private void NewCardClicked(object sender, EventArgs e)

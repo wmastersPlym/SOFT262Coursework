@@ -29,7 +29,7 @@ namespace RevisionCards
             Navigation.PushAsync(new TopicViewer(tappedTopic, subject));
         }
 
-        private void StartAll(object sender, EventArgs e)
+        async private void StartAll(object sender, EventArgs e)
         {
             ObservableCollection<Card> allCards = new ObservableCollection<Card>();
 
@@ -42,8 +42,15 @@ namespace RevisionCards
                 }
             }
 
-
-            Navigation.PushAsync(new CardViewer(allCards, subject.Title, subject.Colour));
+            if (allCards.Count > 0 && allCards != null)
+            {
+                await Navigation.PushAsync(new CardViewer(allCards, subject.Title, subject.Colour));
+            }
+            else
+            {
+                await DisplayAlert("Alert", "No cards found", "OK");
+            }
+            
         }
 
         private void NewTopicClicked(object sender, EventArgs e)

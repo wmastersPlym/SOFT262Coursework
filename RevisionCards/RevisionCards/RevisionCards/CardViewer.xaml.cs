@@ -32,7 +32,9 @@ namespace RevisionCards
             allCards = cards;
             TopicSubjectTitle = title;
 
-            BindingContext = cards;
+            // SHUFFLE CARDS // TODO
+
+            BindingContext = allCards;
             this.Title = TopicSubjectTitle;
 
             SetQuestionAndAnswer();
