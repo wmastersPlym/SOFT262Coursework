@@ -50,5 +50,19 @@ namespace RevisionCards
         {
             Navigation.PushAsync(new NewTopic(subject));
         }
+
+        private void EditSubjectClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EditSubject(subject));
+        }
+
+        private void DeleteSubjectClicked(object sender, EventArgs e)
+        {
+            if (Data.GetInstance().GetAllSubjects().Contains(subject))
+            {
+                Data.GetInstance().GetAllSubjects().Remove(subject);
+            }
+            Navigation.PopAsync();
+        }
     }
 }

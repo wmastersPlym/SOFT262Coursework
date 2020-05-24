@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
 
 namespace RevisionCards
 {
-    public class Subject
+    public class Subject : INotifyPropertyChanged
     {
         public string Title { get; set; }
         public string Description { get; set; }
@@ -39,12 +40,12 @@ namespace RevisionCards
             Topics = new ObservableCollection<Topic>();
         }
 
-
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public void AddTopic(Topic topic)
         {
             Topics.Add(topic);
         }
-
+        
     }
 }
