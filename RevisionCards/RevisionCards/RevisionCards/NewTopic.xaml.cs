@@ -21,8 +21,14 @@ namespace RevisionCards
         {
             subjectToAddTo = subject;
             InitializeComponent();
+            if(subject.Colour != null)
+            {
+                stack.BackgroundColor = subject.Colour;
+            } else
+            {
+                stack.BackgroundColor = Color.MistyRose;
+            }
             
-            stack.BackgroundColor = Color.MistyRose;
             foreach (string s in colours.Keys)
             {
                 ColourPicker.Items.Add(s);

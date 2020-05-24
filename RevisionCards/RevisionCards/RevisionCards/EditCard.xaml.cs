@@ -21,6 +21,7 @@ namespace RevisionCards
             topicItsIn = topic;
             BindingContext = cardToEdit;
             InitializeComponent();
+            stack.BackgroundColor = topic.Colour;
         }
 
         private void DoneClicked(object sender, EventArgs e)

@@ -17,7 +17,14 @@ namespace RevisionCards
         public NewCard(Topic topic)
         {
             this.topic = topic;
+            
+            
             InitializeComponent();
+
+            if (topic.Colour != null)
+            {
+                stack.BackgroundColor = topic.Colour;
+            }
         }
 
         private void DoneClicked(object sender, EventArgs e)

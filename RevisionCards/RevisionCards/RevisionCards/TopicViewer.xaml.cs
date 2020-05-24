@@ -22,7 +22,7 @@ namespace RevisionCards
             this.subject = subject;
 
             InitializeComponent();
-            stack.BackgroundColor = subject.Colour;
+            stack.BackgroundColor = topic.Colour;
             BindingContext = topic;
         }
 

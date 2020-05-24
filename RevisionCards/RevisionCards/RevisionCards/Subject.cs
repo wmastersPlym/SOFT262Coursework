@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using System.Xml.Serialization;
 using Xamarin.Forms;
 
 namespace RevisionCards
@@ -39,8 +40,10 @@ namespace RevisionCards
                 }
             }
         }
-
+        [XmlIgnore]
         private Color _colour;
+
+        [XmlIgnore]
         public Color Colour {
             get
             {
@@ -71,6 +74,12 @@ namespace RevisionCards
                 }
             }
         } 
+
+        public string ColourHex // used for serialisation of the Colour attribute
+        {
+            get { return Colour.ToHex(); }
+            set { Colour = Color.FromHex(value); }
+        }
         
         public Subject()
         {
