@@ -13,12 +13,7 @@ namespace RevisionCards
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewTopic : ContentPage
     {
-        Dictionary<string, Color> colours = new Dictionary<string, Color>
-        {
-            { "MistyRose", Color.MistyRose }, {"PeachPuff", Color.PeachPuff },
-            {"PaleGreen", Color.LightSeaGreen }, {"LightSteelBlue", Color.LightSteelBlue},
-            {"AntiqueWhite", Color.AntiqueWhite }
-        };
+        Dictionary<string, Color> colours = Data.colours;
 
         private Subject subjectToAddTo;
 

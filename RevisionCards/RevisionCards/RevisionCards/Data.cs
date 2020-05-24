@@ -5,14 +5,13 @@ using System.Collections.ObjectModel;
 using System.Xml.Serialization;
 using System.Runtime.CompilerServices;
 using System.IO;
+using Xamarin.Forms;
 
 namespace RevisionCards
 {
     [Serializable]
     class SerialisableData
     {
-        //public ObservableCollection<Subject> allSubjects { get; set; }
-
         private static string file = "topics.xml";
 
         public SerialisableData()
@@ -57,7 +56,13 @@ namespace RevisionCards
     class Data
     {
         private static Data instance;
-        
+        //public ObservableCollection<Subject> allSubjects { get; set; }
+        public static Dictionary<string, Color> colours = new Dictionary<string, Color>
+        {
+            { "MistyRose", Color.MistyRose }, {"PeachPuff", Color.PeachPuff },
+            {"PaleGreen", Color.LightSeaGreen }, {"LightSteelBlue", Color.LightSteelBlue},
+            {"AntiqueWhite", Color.AntiqueWhite }
+        };
 
         private ObservableCollection<Subject> allSubjects;
 

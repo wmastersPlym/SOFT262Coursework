@@ -13,12 +13,7 @@ namespace RevisionCards
     public partial class NewSubject : ContentPage
     {
 
-        Dictionary<string, Color> colours = new Dictionary<string, Color>
-        {
-            { "MistyRose", Color.MistyRose }, {"PeachPuff", Color.PeachPuff },
-            {"PaleGreen", Color.LightSeaGreen }, {"LightSteelBlue", Color.LightSteelBlue},
-            {"AntiqueWhite", Color.AntiqueWhite }
-        };
+        Dictionary<string, Color> colours = Data.colours;
 
         public NewSubject()
         {
@@ -29,8 +24,6 @@ namespace RevisionCards
                 ColourPicker.Items.Add(s);
             }
             ColourPicker.SelectedIndex = 0;
-
-            
         }
 
         private void ChangedColour(object sender, EventArgs e)

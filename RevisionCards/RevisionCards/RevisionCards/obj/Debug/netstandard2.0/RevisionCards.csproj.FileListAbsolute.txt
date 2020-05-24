@@ -18,3 +18,5 @@ E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\NewSubject.xaml.g.cs
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\NewTopic.xaml.g.cs
 E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\NewCard.xaml.g.cs
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\EditCard.xaml.g.cs
+E:\Documents\GitHub\SOFT262Coursework\RevisionCards\RevisionCards\RevisionCards\obj\Debug\netstandard2.0\EditTopic.xaml.g.cs

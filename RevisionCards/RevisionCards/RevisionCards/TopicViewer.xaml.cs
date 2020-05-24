@@ -14,20 +14,22 @@ namespace RevisionCards
     {
 
         private Topic topic;
+        private Subject subject;
 
-        public TopicViewer(Topic topic, Color colour)
+        public TopicViewer(Topic topic, Subject subject)
         {
             this.topic = topic;
+            this.subject = subject;
 
             InitializeComponent();
-            stack.BackgroundColor = colour;
+            stack.BackgroundColor = subject.Colour;
             BindingContext = topic;
         }
 
         private void OnCardTapped(object sender, ItemTappedEventArgs e)
         {
-            //Subject tappedSubject = e.Item as Subject;
-            //Navigation.PushAsync(new SubjectViewer(tappedSubject));
+            Card tappedCard = e.Item as Card;
+            Navigation.PushAsync(new EditCard(tappedCard, topic));
         }
 
         private void StartClicked(object sender, EventArgs e)
@@ -38,6 +40,20 @@ namespace RevisionCards
         private void NewCardClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NewCard(topic));
+        }
+
+        private void EditTopicClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EditTopic(topic));
+        }
+
+        private void DeleteTopicClicked(object sender, EventArgs e)
+        {
+            if (subject.Topics.Contains(topic))
+            {
+                subject.Topics.Remove(topic);
+            }
+            Navigation.PopAsync();
         }
     }
 }

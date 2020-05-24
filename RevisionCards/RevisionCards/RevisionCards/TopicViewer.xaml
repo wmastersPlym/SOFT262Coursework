@@ -8,6 +8,8 @@
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New Card" Clicked="NewCardClicked" Order="Secondary"/>
+        <ToolbarItem Text="Edit Topic" Clicked="EditTopicClicked" Order="Secondary"/>
+        <ToolbarItem Text="Delete Topic" Clicked="DeleteTopicClicked" Order="Secondary"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Padding="10" x:Name="stack">

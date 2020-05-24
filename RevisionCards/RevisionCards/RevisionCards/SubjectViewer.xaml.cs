@@ -26,7 +26,7 @@ namespace RevisionCards
         private void OnTopicTapped(object sender, ItemTappedEventArgs e)
         {
             Topic tappedTopic = e.Item as Topic;
-            Navigation.PushAsync(new TopicViewer(tappedTopic, subject.Colour));
+            Navigation.PushAsync(new TopicViewer(tappedTopic, subject));
         }
 
         private void StartAll(object sender, EventArgs e)

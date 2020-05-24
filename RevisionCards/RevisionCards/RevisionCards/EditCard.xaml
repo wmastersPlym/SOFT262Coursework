@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RevisionCards.EditCard"
+             Title="Edit card">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete Card" Clicked="DeleteCardClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout x:Name="stack">
+            <Entry Placeholder="Question"
+                   x:Name="QuestionInput"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   Text="{Binding Question}"/>
+            <Entry Placeholder="Answer" 
+                   x:Name="AnswerInput"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   Text="{Binding Answer}"/>
+            <Button Text="Add" Clicked="DoneClicked" 
+                    HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
