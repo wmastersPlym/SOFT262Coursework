@@ -9,12 +9,68 @@ namespace RevisionCards
 {
     public class Subject : INotifyPropertyChanged
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
+        private string _title;
+        public string Title {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                if(PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Title"));
+                }
+            }
+        }
+        private string _description;
+        public string Description {
+            get
+            {
+                return _description;
+            }
+            set
+            {
+                _description = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Description"));
+                }
+            }
+        }
 
-        public Color Colour { get; set; }
+        private Color _colour;
+        public Color Colour {
+            get
+            {
+                return _colour;
+            }
+            set
+            {
+                _colour = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Colour"));
+                }
+            }
+        }
 
-        public ObservableCollection<Topic> Topics { get; set; } 
+        private ObservableCollection<Topic> _topics;
+        public ObservableCollection<Topic> Topics {
+            get
+            {
+                return _topics;
+            }
+            set
+            {
+                _topics = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Topics"));
+                }
+            }
+        } 
         
         public Subject()
         {

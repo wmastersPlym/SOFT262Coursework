@@ -21,7 +21,7 @@
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="Center"
                    Text="{Binding Answer}"/>
-            <Button Text="Add" Clicked="DoneClicked" 
+            <Button Text="Save" Clicked="DoneClicked" 
                     HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>

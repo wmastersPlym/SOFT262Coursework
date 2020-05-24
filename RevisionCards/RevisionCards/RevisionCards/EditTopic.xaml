@@ -24,7 +24,7 @@
             <Label Text="Colour:" />
             <Picker x:Name="ColourPicker" SelectedIndexChanged="ChangedColour"
                     HorizontalOptions="FillAndExpand"/>
-            <Button Text="Add" Clicked="DoneClicked" 
+            <Button Text="Save" Clicked="DoneClicked" 
                     HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>

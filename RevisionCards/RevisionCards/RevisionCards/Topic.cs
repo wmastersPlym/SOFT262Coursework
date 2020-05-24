@@ -3,18 +3,75 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace RevisionCards
 {
-    public class Topic
+    public class Topic : INotifyPropertyChanged
     {
+        private string _title;
+        public string Title {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Title"));
+                }
+            }
+        }
 
-        public string Title { get; set; }
-        public string Description { get; set; }
+        private string _description;
+        public string Description {
+            get
+            {
+                return _description;
+            }
+            set
+            {
+                _description = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Description"));
+                }
+            }
+        }
 
-        public ObservableCollection<Card> Cards { get; set; }
+        private ObservableCollection<Card> _cards;
+        public ObservableCollection<Card> Cards {
+            get
+            {
+                return _cards;
+            }
+            set
+            {
+                _cards = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Cards"));
+                }
+            }
+        }
 
-        public Color Colour { get; set; }
+        private Color _colour;
+        public Color Colour {
+            get
+            {
+                return _colour;
+            }
+            set
+            {
+                _colour = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Colour"));
+                }
+            }
+        }
 
 
         public Topic()
@@ -39,6 +96,8 @@ namespace RevisionCards
             Colour = colour;
             Cards = new ObservableCollection<Card>();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public void AddCard(Card card)
         {
