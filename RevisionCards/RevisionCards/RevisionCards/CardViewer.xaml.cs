@@ -29,10 +29,11 @@ namespace RevisionCards
 
             status = CardStatus.Question;
             position = 0;
-            allCards = cards;
+            allCards = new ObservableCollection<Card>(cards);
             TopicSubjectTitle = title;
 
             // SHUFFLE CARDS // TODO
+            shuffleCards();
 
             BindingContext = allCards;
             this.Title = TopicSubjectTitle;
@@ -89,6 +90,23 @@ namespace RevisionCards
             await AnswerStack.FadeTo(0);
             QuestionTitle.IsVisible = false;
             Question.Text = "All done!";
+        }
+
+
+        private void shuffleCards()
+        {
+            if(allCards.Count > 1)
+            {
+                Random random = new Random();
+                for (int i =0; i < allCards.Count; i++)
+                {
+                    int randIndex = random.Next(0, allCards.Count);
+
+                    Card tmp = allCards[i];
+                    allCards[i] = allCards[randIndex];
+                    allCards[randIndex] = tmp;
+                }
+            }
         }
     }
 
