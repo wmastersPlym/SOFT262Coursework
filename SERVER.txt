@@ -1,0 +1,1 @@
+No Server was used for this project, things are saved locally using serialisation to Environment.SpecialFolder.LocalApplicationData in the file "topics.xml"

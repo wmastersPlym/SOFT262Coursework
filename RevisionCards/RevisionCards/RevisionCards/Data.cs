@@ -19,11 +19,12 @@ namespace RevisionCards
 
         }
 
+        // Saves all the data within the local application data file on the mobile phone
         public void Save(ObservableCollection<Subject> allSubjects)
         {
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), file);
-            Console.WriteLine(fileName);
             XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Subject>));
+            // Writes and serialises the data to the file
             using (StreamWriter writer = new System.IO.StreamWriter(fileName))
             {
                 serializer.Serialize(writer, allSubjects);
@@ -31,16 +32,19 @@ namespace RevisionCards
             }
         }
 
+        // Loads all the data from the file and deserialises it and returns all the subjects
         public ObservableCollection<Subject> Load()
         {
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), file);
 
             XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Subject>));
+            // creates an empty ObservableCollection ready to populate
             ObservableCollection<Subject> subjects;
             try
             {
                 using(FileStream stream = File.OpenRead(fileName))
                 {
+                    // Fills the ObservableCollection with all the deserialised data 
                     subjects = serializer.Deserialize(stream) as ObservableCollection<Subject>;
                     return subjects;
                 }
@@ -55,9 +59,10 @@ namespace RevisionCards
 
     class Data
     {
+        // Using singleton 
         private static Data instance;
-        //public ObservableCollection<Subject> allSubjects { get; set; }
-        public static Dictionary<string, Color> colours = new Dictionary<string, Color>
+
+        public static Dictionary<string, Color> colours = new Dictionary<string, Color> // potential background colours
         {
             { "MistyRose", Color.MistyRose }, {"PeachPuff", Color.PeachPuff },
             {"PaleGreen", Color.LightSeaGreen }, {"LightSteelBlue", Color.LightSteelBlue},
@@ -107,28 +112,19 @@ namespace RevisionCards
 
 
         // Save
-        public void Save()
+        public void Save() // Saves all the subjects
         {
-            //string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), file);
-
-            /*using (var writer = new System.IO.StreamWriter(fileName))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Subject>));
-                serializer.Serialize(writer, allSubjects);
-                writer.Flush();
-            }*/
-
             SerialisableData sd = new SerialisableData();
             sd.Save(allSubjects);
         }
 
-        public void Load()
-        {
+        public void Load() // loads all the subjects into the allSubjects variable
+        { 
             SerialisableData sd = new SerialisableData();
             allSubjects = sd.Load();
         }
 
-        public ObservableCollection<Subject> TestLoad()
+        public ObservableCollection<Subject> TestLoad() // used for testing the serialisation
         {
             SerialisableData sd = new SerialisableData();
             return sd.Load();
@@ -136,7 +132,7 @@ namespace RevisionCards
 
 
 
-        private void generateTestSubjects()
+        private void generateTestSubjects() // generates subjects and topics for testing
         {
             allSubjects = new ObservableCollection<Subject>();
 

@@ -110,7 +110,7 @@ namespace RevisionCards
     }
 
 
-    enum CardStatus
+    enum CardStatus // enum used to store what state the card displaying is at
     {
         Question,
         Answer,
