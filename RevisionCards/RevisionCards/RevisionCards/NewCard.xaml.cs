@@ -29,6 +29,7 @@ namespace RevisionCards
 
         private void DoneClicked(object sender, EventArgs e)
         {
+            // Creates a new card using the data within the form and adds it to the topic
             topic.AddCard(new Card(QuestionInput.Text, AnswerInput.Text));
             Navigation.PopAsync();
         }

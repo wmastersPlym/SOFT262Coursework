@@ -26,6 +26,7 @@ namespace RevisionCards
 
         private void DoneClicked(object sender, EventArgs e)
         {
+            // Saves the changed data and returns the user to the previous page
             cardToEdit.Question = QuestionInput.Text;
             cardToEdit.Answer = AnswerInput.Text;
             Navigation.PopAsync();
@@ -33,9 +34,11 @@ namespace RevisionCards
 
         private void DeleteCardClicked(object sender, EventArgs e)
         {
+            // Makes sure the card is within the topic then delets it
             if (topicItsIn.Cards.Contains(cardToEdit)) {
                 topicItsIn.Cards.Remove(cardToEdit);
             }
+            // returns the user to the previous page
             Navigation.PopAsync();
         }
     }

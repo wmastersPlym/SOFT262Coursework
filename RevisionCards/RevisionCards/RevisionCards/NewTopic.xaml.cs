@@ -38,25 +38,22 @@ namespace RevisionCards
 
         private void ChangedColour(object sender, EventArgs e)
         {
-            if (ColourPicker.SelectedIndex == -1)
+            if (ColourPicker.SelectedIndex == -1) // Makes sure a valid item was picked
             {
                 stack.BackgroundColor = Color.MistyRose;
             }
             else
             {
-                stack.BackgroundColor = colours[ColourPicker.Items[ColourPicker.SelectedIndex]];
+                stack.BackgroundColor = colours[ColourPicker.Items[ColourPicker.SelectedIndex]]; // sets the background to the colour that was picked in the picker
             }
 
         }
 
         private void DoneClicked(object sender, EventArgs e)
         {
-            //Data.GetInstance().AddSubject(new Subject(TitleInput.Text, DescInput.Text, colours[ColourPicker.Items[ColourPicker.SelectedIndex]]));
-            //bool works = Data.GetInstance().GetAllSubjects().Contains(subjectToAddTo);
-
+            // Creates a new topic using the data in the form and adds it to the topic
             subjectToAddTo.AddTopic(new Topic(TitleInput.Text, DescInput.Text, colours[ColourPicker.Items[ColourPicker.SelectedIndex]]));
 
-            ObservableCollection<Subject> test = Data.GetInstance().GetAllSubjects();
             Navigation.PopAsync();
         }
     }

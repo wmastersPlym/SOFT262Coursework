@@ -56,9 +56,6 @@ namespace RevisionCards
 
 
                 
-            } else
-            {
-
             }
 
             
@@ -67,8 +64,9 @@ namespace RevisionCards
 
         public void SetQuestionAndAnswer()
         {
+
             if(allCards != null && allCards.Count > 0)
-            {
+            {   // Displays next card
                 if (position < allCards.Count)
                 {
                     Question.Text = allCards.ElementAt(position).Question;
@@ -77,6 +75,7 @@ namespace RevisionCards
                     position++;
                 } else
                 {
+                    // When all cards have been through
                     status = CardStatus.Finished;
                     DisplayEndScreen();
                 }
@@ -93,7 +92,7 @@ namespace RevisionCards
         }
 
 
-        private void shuffleCards()
+        private void shuffleCards() // puts the cards in a random order
         {
             if(allCards.Count > 1)
             {

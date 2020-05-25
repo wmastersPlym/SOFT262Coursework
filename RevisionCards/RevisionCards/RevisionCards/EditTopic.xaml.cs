@@ -21,13 +21,15 @@ namespace RevisionCards
         {
             this.topic = topic;
             BindingContext = this.topic;
+
             InitializeComponent();
-            foreach (string s in Data.colours.Keys)
+            foreach (string s in Data.colours.Keys) // Adds all the colours to the colour picker
             {
                 ColourPicker.Items.Add(s);
             }
             ColourPicker.SelectedIndex = 0;
-            if (topic.Colour != null)
+
+            if (topic.Colour != null) // sets the background colour to the colour used by the topic
             {
                 stack.BackgroundColor = topic.Colour;
             }
@@ -41,12 +43,13 @@ namespace RevisionCards
             }
             else
             {
-                stack.BackgroundColor = Data.colours[ColourPicker.Items[ColourPicker.SelectedIndex]];
+                stack.BackgroundColor = Data.colours[ColourPicker.Items[ColourPicker.SelectedIndex]]; // Sets the background colour to what was picked in the colour picker
             }
         }
 
         private void DoneClicked(object sender, EventArgs e)
         {
+            // Saves all the changes made and sends the user back to the previous page
             topic.Title = TitleInput.Text;
             topic.Description = DescInput.Text;
             topic.Colour = Data.colours[ColourPicker.Items[ColourPicker.SelectedIndex]];

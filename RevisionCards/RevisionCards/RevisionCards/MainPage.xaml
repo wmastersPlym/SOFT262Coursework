@@ -10,13 +10,12 @@
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="New Subject" Clicked="NewSubjectClicked" Order="Secondary"/>
-        <ToolbarItem Text="Save" Clicked="SaveClicked" Order="Secondary"/>
-        <ToolbarItem Text="Load" Clicked="LoadClicked" Order="Secondary"/>
+        <ToolbarItem Text="Save" Clicked="SaveClicked" Order="Primary"/>
+        <!--<ToolbarItem Text="Load" Clicked="LoadClicked" Order="Secondary"/> -->
     </ContentPage.ToolbarItems>
-    
-    
+
+
     <StackLayout Padding="10" BackgroundColor="MistyRose">
-        <!-- Place new controls here -->
         <Label Text="Subjects:" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" 

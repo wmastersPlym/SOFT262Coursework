@@ -33,7 +33,7 @@ namespace RevisionCards
         {
             ObservableCollection<Card> allCards = new ObservableCollection<Card>();
 
-            // Adds all cards a from the subject to a ObservableCollection 
+            // Adds all cards from the subject to a ObservableCollection 
             foreach(Topic t in subject.Topics)
             {
                 foreach(Card c in t.Cards)
@@ -42,30 +42,30 @@ namespace RevisionCards
                 }
             }
 
-            if (allCards.Count > 0 && allCards != null)
+            if (allCards.Count > 0 && allCards != null) // Makes sure there are cards within the ObservableCollection
             {
-                await Navigation.PushAsync(new CardViewer(allCards, subject.Title, subject.Colour));
+                await Navigation.PushAsync(new CardViewer(allCards, subject.Title, subject.Colour)); // Displays the cards
             }
             else
             {
-                await DisplayAlert("Alert", "No cards found", "OK");
+                await DisplayAlert("Alert", "No cards found", "OK"); // Lets the user know no cards were found
             }
             
         }
 
         private void NewTopicClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NewTopic(subject));
+            Navigation.PushAsync(new NewTopic(subject)); // Opens the new topic page
         }
 
         private void EditSubjectClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EditSubject(subject));
+            Navigation.PushAsync(new EditSubject(subject)); // Opens edit subject page
         }
 
-        private void DeleteSubjectClicked(object sender, EventArgs e)
+        private void DeleteSubjectClicked(object sender, EventArgs e) // Opens the delete subject page
         {
-            if (Data.GetInstance().GetAllSubjects().Contains(subject))
+            if (Data.GetInstance().GetAllSubjects().Contains(subject)) // Makes sure the subject is in the 'database'
             {
                 Data.GetInstance().GetAllSubjects().Remove(subject);
             }

@@ -28,26 +28,25 @@ namespace RevisionCards
             list.ItemsSource = subjects;
         }
 
-        private void OnSubjectTapped(object sender, ItemTappedEventArgs e)
+        private void OnSubjectTapped(object sender, ItemTappedEventArgs e) // Views the subject tapped on
         {
             Subject tappedSubject = e.Item as Subject;
-            Navigation.PushAsync(new SubjectViewer(tappedSubject));
+            Navigation.PushAsync(new SubjectViewer(tappedSubject)); 
         }
 
-        private void NewSubjectClicked(object sender, EventArgs e)
+        private void NewSubjectClicked(object sender, EventArgs e) // Opens the new subject page
         {
             Navigation.PushAsync(new NewSubject());
         }
 
-        private void SaveClicked(object sender, EventArgs e)
+        private void SaveClicked(object sender, EventArgs e) // Saves all the data to the 'database'
         {
             Data.GetInstance().Save();
         }
 
         private void LoadClicked(object sender, EventArgs e)
         {
-            ObservableCollection<Subject> test = Data.GetInstance().TestLoad();
-            Console.WriteLine("TEST");
+            
         }
     }
 }
